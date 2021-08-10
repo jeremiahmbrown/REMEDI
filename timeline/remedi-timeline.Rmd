@@ -1,0 +1,28 @@
+---
+title: "remedi-timeline"
+author: "Jeremiah Brown"
+date: "8/9/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+This R Markdown document will be used to visually display the timeline for study start up activities for the
+REMEDI study. 
+
+```{r}
+library(timevis)
+data <- data.frame(
+  id      = 1:8,
+  content = c("HHM Edits"  , "CM Checklist Edits"  ,"CM Training", "Inventory Assessment",
+              "Eligibility Prescreen", "IRB Submission", "ClinicalTrials.gov", "Revise FRG"),
+  start   = c("2021-08-10", "2021-08-10", "2021-08-31", "2021-08-31",
+              "2021-08-10", "2021-09-07", "2021-09-07", "2021-08-17"),
+  end     = c("2021-08-24","2021-08-31", NA, "2021-09-07",
+              "2021-08-17", "2021-09-21", "2021-09-21", "2021-08-31")
+)
+
+timevis(data)
+
+```
