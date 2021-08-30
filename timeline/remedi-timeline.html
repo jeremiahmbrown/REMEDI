@@ -179,23 +179,26 @@ pre code {
 <p>This R Markdown document will be used to visually display the timeline for study start up activities for the REMEDI study.</p>
 <pre class="r"><code>library(timevis)
 data &lt;- data.frame(
-  id      = 1:8,
-  content = c(&quot;HHM Edits&quot;  , &quot;CM Checklist Edits&quot;  ,&quot;CM Training&quot;, &quot;Inventory Assessment&quot;,
-              &quot;Eligibility Prescreen&quot;, &quot;IRB Submission&quot;, &quot;ClinicalTrials.gov&quot;, &quot;Revise FRG&quot;),
+  id      = 1:9,
+  content = c(&quot;HHM Edits&quot;  , &quot;CM Checklist Edits&quot;  ,&quot;CM Training&quot;, &quot;Inventory Assess/Order&quot;,
+              &quot;HHD Ripple Setup&quot;, &quot;IRB Submission&quot;, &quot;ClinicalTrials.gov&quot;, &quot;Revise FRG&quot;,
+              &quot;Qualtrics Assessments&quot;),
   start   = c(&quot;2021-08-10&quot;, &quot;2021-08-10&quot;, &quot;2021-08-31&quot;, &quot;2021-08-31&quot;,
-              &quot;2021-08-10&quot;, &quot;2021-09-07&quot;, &quot;2021-09-07&quot;, &quot;2021-08-17&quot;),
+              &quot;2021-08-10&quot;, &quot;2021-09-07&quot;, &quot;2021-09-07&quot;, &quot;2021-08-17&quot;,
+              &quot;2021-08-31&quot;),
   end     = c(&quot;2021-08-24&quot;,&quot;2021-08-31&quot;, NA, &quot;2021-09-07&quot;,
-              &quot;2021-08-17&quot;, &quot;2021-09-21&quot;, &quot;2021-09-21&quot;, &quot;2021-08-31&quot;)
-)
+              &quot;2021-08-24&quot;, &quot;2021-09-21&quot;, &quot;2021-09-21&quot;, &quot;2021-08-31&quot;,
+              &quot;2021-09-21&quot;),
+  editable = TRUE)
 
 timevis(data)</code></pre>
-<div id="htmlwidget-bb98a5228a516788c3f4" class="timevis html-widget" style="width:672px;height:480px;">
+<div id="htmlwidget-aef95e3e79dc924ee133" class="timevis html-widget" style="width:672px;height:480px;">
 <div class="btn-group zoom-menu">
 <button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
 <button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
 </div>
 </div>
-<script type="application/json" data-for="htmlwidget-bb98a5228a516788c3f4">{"x":{"items":[{"id":"1","content":"HHM Edits","start":"2021-08-10","end":"2021-08-24"},{"id":"2","content":"CM Checklist Edits","start":"2021-08-10","end":"2021-08-31"},{"id":"3","content":"CM Training","start":"2021-08-31"},{"id":"4","content":"Inventory Assessment","start":"2021-08-31","end":"2021-09-07"},{"id":"5","content":"Eligibility Prescreen","start":"2021-08-10","end":"2021-08-17"},{"id":"6","content":"IRB Submission","start":"2021-09-07","end":"2021-09-21"},{"id":"7","content":"ClinicalTrials.gov","start":"2021-09-07","end":"2021-09-21"},{"id":"8","content":"Revise FRG","start":"2021-08-17","end":"2021-08-31"}],"groups":null,"showZoom":true,"zoomFactor":0.5,"fit":true,"options":[],"height":null,"timezone":null,"api":[]},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-aef95e3e79dc924ee133">{"x":{"items":[{"id":"1","content":"HHM Edits","start":"2021-08-10","end":"2021-08-24","editable":"TRUE"},{"id":"2","content":"CM Checklist Edits","start":"2021-08-10","end":"2021-08-31","editable":"TRUE"},{"id":"3","content":"CM Training","start":"2021-08-31","editable":"TRUE"},{"id":"4","content":"Inventory Assess/Order","start":"2021-08-31","end":"2021-09-07","editable":"TRUE"},{"id":"5","content":"HHD Ripple Setup","start":"2021-08-10","end":"2021-08-24","editable":"TRUE"},{"id":"6","content":"IRB Submission","start":"2021-09-07","end":"2021-09-21","editable":"TRUE"},{"id":"7","content":"ClinicalTrials.gov","start":"2021-09-07","end":"2021-09-21","editable":"TRUE"},{"id":"8","content":"Revise FRG","start":"2021-08-17","end":"2021-08-31","editable":"TRUE"},{"id":"9","content":"Qualtrics Assessments","start":"2021-08-31","end":"2021-09-21","editable":"TRUE"}],"groups":null,"showZoom":true,"zoomFactor":0.5,"fit":true,"options":[],"height":null,"timezone":null,"api":[]},"evals":[],"jsHooks":[]}</script>
 
 
 

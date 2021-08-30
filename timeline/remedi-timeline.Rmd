@@ -14,14 +14,17 @@ REMEDI study.
 ```{r}
 library(timevis)
 data <- data.frame(
-  id      = 1:8,
-  content = c("HHM Edits"  , "CM Checklist Edits"  ,"CM Training", "Inventory Assessment",
-              "Eligibility Prescreen", "IRB Submission", "ClinicalTrials.gov", "Revise FRG"),
+  id      = 1:9,
+  content = c("HHM Edits"  , "CM Checklist Edits"  ,"CM Training", "Inventory Assess/Order",
+              "HHD Ripple Setup", "IRB Submission", "ClinicalTrials.gov", "Revise FRG",
+              "Qualtrics Assessments"),
   start   = c("2021-08-10", "2021-08-10", "2021-08-31", "2021-08-31",
-              "2021-08-10", "2021-09-07", "2021-09-07", "2021-08-17"),
+              "2021-08-10", "2021-09-07", "2021-09-07", "2021-08-17",
+              "2021-08-31"),
   end     = c("2021-08-24","2021-08-31", NA, "2021-09-07",
-              "2021-08-17", "2021-09-21", "2021-09-21", "2021-08-31")
-)
+              "2021-08-24", "2021-09-21", "2021-09-21", "2021-08-31",
+              "2021-09-21"),
+  editable = TRUE)
 
 timevis(data)
 
